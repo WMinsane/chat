@@ -1,6 +1,6 @@
 <template>
   <div class="drawer">
-    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle"/>
     <div class="drawer-content flex flex-col">
       <!-- Navbar -->
       <div class="w-full navbar bg-base-300">
@@ -16,26 +16,25 @@
         <div class="flex-none hidden lg:block">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
-            <li><NuxtLink to="/">Home</NuxtLink></li>
             <li><NuxtLink :to="{ name: 'room-roomList' }">ルーム一覧</NuxtLink></li>
             <li><NuxtLink to="/room/roomReg">ルーム作成</NuxtLink></li>
-            <li><NuxtLink to="/chat">チャット</NuxtLink></li>
           </ul>
         </div>
       </div>
       <!-- Page content here -->
     </div>
-    <div class="drawer-side">
+    <div class="drawer-side z-10">
       <label for="my-drawer-3" class="drawer-overlay"></label>
-      <ul class="menu p-4 w-80 h-full bg-base-200">
+      <ul class="menu p-4 w-80 h-full bg-base-200" @click="toggle">
         <!-- Sidebar content here -->
-        <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink :to="{ name: 'room-roomList' }">ルーム一覧</NuxtLink></li>
         <li><NuxtLink to="/room/roomReg">ルーム作成</NuxtLink></li>
-        <li><NuxtLink to="/chat">チャット</NuxtLink></li>
 
       </ul>
 
     </div>
   </div>
 </template>
+<script setup>
+  const toggle = () => {document.getElementById('my-drawer-3').click()}
+</script>

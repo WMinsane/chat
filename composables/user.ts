@@ -1,7 +1,10 @@
-export function user(name: String) {
-    const userName = ref(name)
-    // const dec = () => (count.value = count.value - 1);
-    return {
-      userName,
-    };
-  }
+const userName = ref("")
+export function user(name: string) {
+  userName.value = name
+  return {
+    userName,
+  };
+}
+export const getUser = () => {
+  return userName.value
+}
