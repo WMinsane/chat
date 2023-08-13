@@ -28,8 +28,8 @@ const create = () => {
         const { data } = useFetch('/api/model/room/create', {
             method: 'post',
             body: inputForm.value
-        }
-        )
+        })
+        router.push({ path: "/room/roomList" })
     }
     inputForm.value = []
 }
