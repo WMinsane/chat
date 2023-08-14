@@ -17,7 +17,7 @@ model room {
 }
 model chat {
   id      Int      @id @default(autoincrement())
-  roomId  Int
+  roomid  Int
   text    String
   name    String
   date    String

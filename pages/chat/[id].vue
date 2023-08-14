@@ -37,7 +37,7 @@ const post = async () => {
             method: 'post',
             body: {
                 text: text.value,
-                roomId: parseInt(route.params.id),
+                roomid: parseInt(route.params.id),
                 name: user,
                 date: new Date().toLocaleDateString('ja-JP')
             }

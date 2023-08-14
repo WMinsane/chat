@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event);
   const chats = await prisma.chat.findMany({
     where: {
-      roomId: { equals: body.id }
+      roomid: { equals: body.id }
     }
   });
   return chats;
